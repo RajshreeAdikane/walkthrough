@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Three.js Camera Controls</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+        #controls {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            grid-template-areas: 
+                "a w d"
+                "s empty s";
+            gap: 10px;
+        }
+        .control-button {
+            width: 50px;
+            height: 50px;
+            background-color: #333;
+            color: white;
+            border: none;
+            font-size: 18px;
+            cursor: pointer;
+        }
+        #arrow-controls {
+            position: absolute;
+            bottom: 80px;
+            left: 20px;
+            grid-template-areas: 
+                "left right";
+            gap: 10px;
+        }
+        #arrow-controls .control-button {
+            width: 50px;
+            height: 50px;
+        }
+        #loading-screen {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background: #000;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+        }
+    </style>
+</head>
+<body>
+    <div id="loading-screen">
+        <p id="loading-progress">Loading: 0%</p>
+    </div> 
+    <!-- Buttons for WASD Controls -->
+     <div id="controls">
+        <button id="button-a" class="control-button">A</button>
+        <button id="button-s" class="control-button">S</button>
+        <button id="button-d" class="control-button">D</button>
+    </div> 
+
+    <!-- Buttons for Arrow Controls -->
+     <div id="arrow-controls">
+        <button id="button-left" class="control-button">◄</button>
+        <button id="button-w" class="control-button">W</button>
+        <button id="button-right" class="control-button">►</button>
+    </div>
+
+    <!-- Include the Three.js and your script -->
+    <script type="module" src="main.js"></script>
+</body>
+</html>

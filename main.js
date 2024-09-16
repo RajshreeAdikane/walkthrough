@@ -44,7 +44,7 @@ dracoLoader.setDecoderPath('https://www.gstatic.com/draco/v1/decoders/');
 const loader = new GLTFLoader();
 loader.setDRACOLoader(dracoLoader);
 
-loader.load('./public/assets/the_king_s_hall/scene.gltf', function (gltf) {
+loader.load('./assets/the_king_s_hall/scene.gltf', function (gltf) {
     const room = gltf.scene;
     scene.add(room);
 

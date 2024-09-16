@@ -196,9 +196,53 @@ window.addEventListener('resize', function () {
 });
 
 // Handle keyboard input
+// Capture keydown and keyup events for movement
 window.addEventListener('keydown', function (e) {
     keyboard[e.keyCode] = true;
 });
 window.addEventListener('keyup', function (e) {
     keyboard[e.keyCode] = false;
+});
+
+// Capture button clicks for movement
+document.getElementById('button-w').addEventListener('mousedown', function () {
+    keyboard[87] = true; // W key
+});
+document.getElementById('button-w').addEventListener('mouseup', function () {
+    keyboard[87] = false;
+});
+
+document.getElementById('button-s').addEventListener('mousedown', function () {
+    keyboard[83] = true; // S key
+});
+document.getElementById('button-s').addEventListener('mouseup', function () {
+    keyboard[83] = false;
+});
+
+document.getElementById('button-a').addEventListener('mousedown', function () {
+    keyboard[65] = true; // A key
+});
+document.getElementById('button-a').addEventListener('mouseup', function () {
+    keyboard[65] = false;
+});
+
+document.getElementById('button-d').addEventListener('mousedown', function () {
+    keyboard[68] = true; // D key
+});
+document.getElementById('button-d').addEventListener('mouseup', function () {
+    keyboard[68] = false;
+});
+
+document.getElementById('button-left').addEventListener('mousedown', function () {
+    keyboard[37] = true; // Left arrow key
+});
+document.getElementById('button-left').addEventListener('mouseup', function () {
+    keyboard[37] = false;
+});
+
+document.getElementById('button-right').addEventListener('mousedown', function () {
+    keyboard[39] = true; // Right arrow key
+});
+document.getElementById('button-right').addEventListener('mouseup', function () {
+    keyboard[39] = false;
 });
